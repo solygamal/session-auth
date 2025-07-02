@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2>Register</h2>
+        <div>
+    <form method="POST" action="/register">
+      <input name="username" placeholder="Username" required />
+      <input name="password" placeholder="Password" type="password" required />
+      <input name="email" placeholder="Enter your email" type="email" required />
+        <select name="gender" required>
+    <option value="">Select Gender</option>
+    <option value="Female">Female</option>
+    <option value="Male">Male</option>
+        </select>
+     
+
+        <label for="birthday">Birthday:</label>
+     <input type="date" name="date" required />
+
+
+      <button type="submit">Register</button>
+    </form>
+</div>
+       <% if(error){ %>
+        <p><%= error %></p>
+
+   <% } %>
+
+    
+</body>
+</html>
